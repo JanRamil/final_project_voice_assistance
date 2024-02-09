@@ -53,30 +53,30 @@ def submit_details():
     
     user_window = tk.Toplevel()
     user_window.title("User Account")
-    background_image = PhotoImage(file=r"C:\Users\user\Downloads\51234.png")
-    background_label = tk.Label(window, image=background_image)
+    user_window.geometry("330x330")
+    background_label = tk.Label(user_window, image=background_image)
     background_label.place(relwidth=1, relheight=1)
     
     # Customize window style
-    user_window.configure(bg="#f0f0f0")
+    user_window.configure(bg="#5E5BA9")
     
     # Creating widgets
-    min_length_label = tk.Label(user_window, text="Minimum Length:", bg="#f0f0f0")
+    min_length_label = tk.Label(user_window, text="Minimum Length:", font=("Cooper Black", 10), bg="#5E5BA9")
     min_length_label.pack(pady=(10, 2))
     min_length_entry = tk.Entry(user_window)
     min_length_entry.pack(pady=2)
     number_var = tk.BooleanVar()
-    number_check = tk.Checkbutton(user_window, text="Include Numbers", variable=number_var, bg="#f0f0f0")
+    number_check = tk.Checkbutton(user_window, text="Include Numbers", variable=number_var, bg="#5E5BA9", font=("Cooper Black", 10))
     number_check.pack()
     
     special_var = tk.BooleanVar()
-    special_check = tk.Checkbutton(user_window, text="Include Special Characters", variable=special_var, bg="#f0f0f0")
+    special_check = tk.Checkbutton(user_window, text="Include Special Characters", variable=special_var, bg="#5E5BA9", font=("Cooper Black", 10))
     special_check.pack()
 
-    result_label = tk.Label(user_window, text="", bg="#f0f0f0", font=("Helvetica", 12))
+    result_label = tk.Label(user_window, text="", bg="#f0f0f0", font=("Cooper Black", 10))
     result_label.pack(pady=(10, 2))
 
-    generate_button = tk.Button(user_window, text="Generate Password", command=lambda: generate_password(min_length_entry, number_var, special_var, result_label), bg="#4caf50", fg="white", font=("Helvetica", 12), relief=tk.FLAT)
+    generate_button = tk.Button(user_window, text="Generate Password", command=lambda: generate_password(min_length_entry, number_var, special_var, result_label), bg="#5E5BA9", fg="white", font=("Cooper Black", 12), relief=tk.FLAT)
     generate_button.pack(pady=(2, 10))
 
 def done_button():
@@ -92,25 +92,25 @@ background_label.place(relwidth=1, relheight=1)
 window.configure(bg="#f0f0f0")
 
 # Creating widgets
-first_name_label = tk.Label(window, text="First Name:", bg="#f0f0f0", font=("Helvetica", 12))
+first_name_label = tk.Label(window, text="First Name:", bg="#5E5BA9", font=("Cooper Black", 12))
 first_name_label.grid(row=0, column=0, padx=10, pady=5, sticky="e")
 first_name_entry = tk.Entry(window, font=("Helvetica", 12))
 first_name_entry.grid(row=0, column=1, padx=10, pady=5)
 
-middle_initials_label = tk.Label(window, text="Middle Initials:", bg="#f0f0f0", font=("Helvetica", 12))
+middle_initials_label = tk.Label(window, text="Middle Initials:", bg="#5E5BA9", font=("Cooper Black", 12))
 middle_initials_label.grid(row=1, column=0, padx=10, pady=5, sticky="e")
 middle_initials_entry = tk.Entry(window, font=("Helvetica", 12))
 middle_initials_entry.grid(row=1, column=1, padx=10, pady=5)
 
-last_name_label = tk.Label(window, text="Last Name:", bg="#f0f0f0", font=("Helvetica", 12))
+last_name_label = tk.Label(window, text="Last Name:", bg="#5E5BA9", font=("Cooper Black", 12))
 last_name_label.grid(row=2, column=0, padx=10, pady=5, sticky="e")
 last_name_entry = tk.Entry(window, font=("Helvetica", 12))
 last_name_entry.grid(row=2, column=1, padx=10, pady=5)
 
-submit_button = tk.Button(window, text="Submit", command=submit_details, bg="#4caf50", fg="white", font=("Helvetica", 12), relief=tk.FLAT)
+submit_button = tk.Button(window, text="Submit", command=submit_details, bg="#4caf50", fg="white", font=("Cooper Black", 12), relief=tk.FLAT)
 submit_button.grid(row=4, columnspan=2, padx=10, pady=10)
 
-done_button = tk.Button(window, text="Done", command=done_button, bg="#e91e63", fg="white", font=("Helvetica", 12), relief=tk.FLAT)
+done_button = tk.Button(window, text="Done", command=done_button, bg="#e91e63", fg="white", font=("Cooper Black", 12), relief=tk.FLAT)
 done_button.grid(row=5, columnspan=2, padx=10, pady=10)
 
 # Running the tkinter event loop
