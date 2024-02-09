@@ -102,3 +102,9 @@ last_name_entry.grid(row=2, column=1, padx=10, pady=5)
 
 submit_button = tk.Button(window, text="Submit", command=submit_details, bg="#4caf50", fg="white", font=("Helvetica", 12), relief=tk.FLAT)
 submit_button.grid(row=4, columnspan=2, padx=10, pady=10)
+
+done_button = tk.Button(window, text="Done", command=done_button, bg="#e91e63", fg="white", font=("Helvetica", 12), relief=tk.FLAT)
+done_button.grid(row=5, columnspan=2, padx=10, pady=10)
+
+# Running the tkinter event loop
+window.mainloop()
