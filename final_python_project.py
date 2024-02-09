@@ -73,4 +73,13 @@ def submit_details():
 
     generate_button = tk.Button(user_window, text="Generate Password", command=lambda: generate_password(min_length_entry, number_var, special_var, result_label), bg="#4caf50", fg="white", font=("Helvetica", 12), relief=tk.FLAT)
     generate_button.pack(pady=(2, 10))
-    
+
+def done_button():
+    window.destroy()
+
+# Creating the tkinter window
+window = tk.Tk()
+window.title("User Information")
+
+# Customize window style
+window.configure(bg="#f0f0f0")
