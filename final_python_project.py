@@ -44,5 +44,33 @@ def generate_password(min_length_entry, number_var, special_var, result_label):
 
     result_label.config(text="Generated Password: " + pwd)
     
+def submit_details():
+    first_name = first_name_entry.get()
+    middle_initials = middle_initials_entry.get()
+    last_name = last_name_entry.get()
     
+    user_window = tk.Toplevel()
+    user_window.title("User Account")
+    
+    # Customize window style
+    user_window.configure(bg="#f0f0f0")
+    
+    # Creating widgets
+    min_length_label = tk.Label(user_window, text="Minimum Length:", bg="#f0f0f0")
+    min_length_label.pack(pady=(10, 2))
+    min_length_entry = tk.Entry(user_window)
+    min_length_entry.pack(pady=2)
+    number_var = tk.BooleanVar()
+    number_check = tk.Checkbutton(user_window, text="Include Numbers", variable=number_var, bg="#f0f0f0")
+    number_check.pack()
+    
+    special_var = tk.BooleanVar()
+    special_check = tk.Checkbutton(user_window, text="Include Special Characters", variable=special_var, bg="#f0f0f0")
+    special_check.pack()
+
+    result_label = tk.Label(user_window, text="", bg="#f0f0f0", font=("Helvetica", 12))
+    result_label.pack(pady=(10, 2))
+
+    generate_button = tk.Button(user_window, text="Generate Password", command=lambda: generate_password(min_length_entry, number_var, special_var, result_label), bg="#4caf50", fg="white", font=("Helvetica", 12), relief=tk.FLAT)
+    generate_button.pack(pady=(2, 10))
     
