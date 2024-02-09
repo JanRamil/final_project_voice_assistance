@@ -27,4 +27,22 @@ def generate_password(min_length_entry, number_var, special_var, result_label):
     has_special = False
     
     
+    while not meets_criteria or len(pwd) < min_length:
+        new_char = random.choice(characters)
+        pwd += new_char
+        
+        if new_char in digits:
+            has_number = True
+        elif new_char in special:
+            has_special = True
+            
+        meets_criteria = True 
+        if has_number: 
+            meets_criteria = has_number
+        if has_special:
+            meets_criteria = meets_criteria and has_special
+
+    result_label.config(text="Generated Password: " + pwd)
+    
+    
     
