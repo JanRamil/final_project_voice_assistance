@@ -4,6 +4,8 @@
 import tkinter as tk
 import random
 import string
+from tkinter import messagebox
+from tkinter import PhotoImage
 
 # Create a function
 def generate_password(min_length_entry, number_var, special_var, result_label):
@@ -51,6 +53,9 @@ def submit_details():
     
     user_window = tk.Toplevel()
     user_window.title("User Account")
+    background_image = PhotoImage(file=r"C:\Users\user\Downloads\51234.png")
+    background_label = tk.Label(window, image=background_image)
+    background_label.place(relwidth=1, relheight=1)
     
     # Customize window style
     user_window.configure(bg="#f0f0f0")
@@ -80,7 +85,9 @@ def done_button():
 # Creating the tkinter window
 window = tk.Tk()
 window.title("User Information")
-
+background_image = PhotoImage(file=r"C:\Users\user\Downloads\51234.png")
+background_label = tk.Label(window, image=background_image)
+background_label.place(relwidth=1, relheight=1)
 # Customize window style
 window.configure(bg="#f0f0f0")
 
