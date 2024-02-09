@@ -83,3 +83,22 @@ window.title("User Information")
 
 # Customize window style
 window.configure(bg="#f0f0f0")
+
+# Creating widgets
+first_name_label = tk.Label(window, text="First Name:", bg="#f0f0f0", font=("Helvetica", 12))
+first_name_label.grid(row=0, column=0, padx=10, pady=5, sticky="e")
+first_name_entry = tk.Entry(window, font=("Helvetica", 12))
+first_name_entry.grid(row=0, column=1, padx=10, pady=5)
+
+middle_initials_label = tk.Label(window, text="Middle Initials:", bg="#f0f0f0", font=("Helvetica", 12))
+middle_initials_label.grid(row=1, column=0, padx=10, pady=5, sticky="e")
+middle_initials_entry = tk.Entry(window, font=("Helvetica", 12))
+middle_initials_entry.grid(row=1, column=1, padx=10, pady=5)
+
+last_name_label = tk.Label(window, text="Last Name:", bg="#f0f0f0", font=("Helvetica", 12))
+last_name_label.grid(row=2, column=0, padx=10, pady=5, sticky="e")
+last_name_entry = tk.Entry(window, font=("Helvetica", 12))
+last_name_entry.grid(row=2, column=1, padx=10, pady=5)
+
+submit_button = tk.Button(window, text="Submit", command=submit_details, bg="#4caf50", fg="white", font=("Helvetica", 12), relief=tk.FLAT)
+submit_button.grid(row=4, columnspan=2, padx=10, pady=10)
