@@ -14,3 +14,17 @@ def generate_password(min_length_entry, number_var, special_var, result_label):
     letters = string.ascii_letters
     digits = string.digits
     special = string.punctuation
+    
+    characters = letters
+    if has_number: 
+        characters += digits
+    if has_special: 
+        characters += special
+        
+    pwd = "" 
+    meets_criteria = False
+    has_number = False
+    has_special = False
+    
+    
+    
